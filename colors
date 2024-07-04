@@ -1,0 +1,53 @@
+#2A3442 - Slightly lighter with a bit more gray
+#18202B - Darker and more muted
+#27313F - A touch lighter with a hint of green
+#1C2430 - Similar darkness but with a bit more blue
+#22303D - More towards blue-green tones
+#19212B - Darker and deeper
+#2B3745 - Slightly brighter and bluer
+#1E2733 - Very close, just a touch darker
+#26313D - A little lighter and bluer
+#16202A - Darker and more subdued
+
+
+
+<i class="fa-solid fa-phone"></i>
+<i class="fa-solid fa-envelope"></i>
+<i class="fa-solid fa-gavel"></i>
+<i class="fa-solid fa-building-columns"></i>
+<i class="fa-solid fa-people-roof"></i>
+<i class="fa-solid fa-file-contract"></i>
+<i class="fa-solid fa-money-bills"></i>
+gavel
+
+<div class="tablet-navigation d-none"> <!-- Start Tablet Navigation-->
+    <nav class="tablet-nav pt-3 d-block">
+        <ul class="border-nav">
+            <li><a href="#" class="gold-text dec-none">Acasa</a><i class="fa-solid fa-house gold-text mobile-position"></i></li>
+            <li><a href="#" class="gold-text dec-none">Despre</a><i class="fa-regular fa-address-card gold-text mobile-position"></i></li>
+            <li><a href="#" class="gold-text dec-none">Intrebari</a><i class="fa-solid fa-question gold-text mobile-position"></i></li>
+            <li><a href="#" class="gold-text dec-none">Contact</a><i class="fa-regular fa-address-book gold-text mobile-position"></i></li>
+        </ul>
+    </nav> <!-- End Tablet Nav -->
+
+    
+    <div class="">
+        <div class="circle-icon icon-phone d-flex mt-3 flex-column text-center">
+            <a href="tel:0749201788"><i class="fas fa-phone gold-text golden-border transition icon-hover"></i></a>
+
+            <div class="contact-text">
+            <span class="gold-text montserat-font font-mobile"><b>Contact Telefonic:</b></span>
+            <span class="white-text montserat-font font-mobile">0749201788</span>
+          </div>
+        </div>
+
+        <div class="circle-icon icon-email d-flex mt-3 pb-2 flex-column text-center">
+            <a href="mailto:example@example.com"><i class="fas fa-envelope gold-text golden-border transition icon-hover"></i></a>
+            <div class="contact-text">
+            <span class="gold-text montserat-font font-mobile"><b>Email:</b></span>
+            <span class="white-text montserat-font font-mobile">finatasergiu@gmail.com</span>
+            </div>
+        </div>
+   </div>
+
+</div> <!-- End Tablet Nav-->
