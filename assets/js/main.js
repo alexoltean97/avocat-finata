@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
     let lastScrollTop = 0;
@@ -16,46 +17,67 @@ $(document).ready(function() {
           header.removeClass('top-fixed');
           nav.addClass('top-bottom-border top-bottom-pad');
         }
+
+        if (header.hasClass('top-fixed')) {
+            $('.content').addClass('content-push');
+        } else {
+            $('.content').removeClass('content-push');
+        }
     
         lastScrollTop = scrollTop;
       });
 
-
-      const toggleClass = (element, addClass, removeClass) => {
+    const toggleClass = (element, addClass, removeClass) => {
         element.addClass(addClass).removeClass(removeClass);
     };
-    
+
     const toggleMobileElements = (isMobile) => {
-        const desktopMenu = $('.navigation-parent');
+        const mobileNav = $('.mobile-navigation');
         const desktopLogo = $('.desktop-logo');
         const header = $('.main-header');
-        const mobileNav = $('.mobile-navigation');
         const btnContact = $('.btn-contact');
-        
+        const mainHeading = $('.main-heading');
+
+
         if (isMobile) {
-            toggleClass(desktopMenu, 'd-none', 'd-block');
             toggleClass(mobileNav, 'd-block', 'd-none');
             toggleClass(desktopLogo, 'd-none', '');
-            toggleClass(header, 'mobile-header', '')
+            toggleClass(header, 'mobile-header', '');
             toggleClass(btnContact, 'd-block', '');
+            toggleClass(mainHeading, 'mb-2', 'mb-4');
         } else {
-            toggleClass(desktopMenu, 'd-block', 'd-none');
             toggleClass(mobileNav, 'd-none', 'd-block');
             toggleClass(desktopLogo, 'd-block', 'd-none');
             toggleClass(header, '', 'mobile-header');
             toggleClass(btnContact, '', 'd-block');
+            toggleClass(mainHeading, 'mb-4', 'mb-2');
         }
     };
 
     const toggleTabletElements = (isTablet) => {
         const tabletNav = $('.tablet-navigation');
-        if(isTablet){
+
+        if (isTablet) {
             toggleClass(tabletNav, 'd-block', 'd-none');
         } else {
             toggleClass(tabletNav, 'd-none', 'd-block');
         }
-    }
-    
+    };
+
+    const toggleDesktopElements = (isDesktop) => {
+        const desktopMenu = $('.navigation-parent');
+        const tabletNav = $('.tablet-navigation');
+        const mobileNav = $('.mobile-navigation');
+
+        if (isDesktop) {
+            toggleClass(desktopMenu, 'd-block', 'd-none');
+            toggleClass(tabletNav, 'd-none', 'd-block');
+            toggleClass(mobileNav, 'd-none', 'd-block');
+        } else {
+            toggleClass(desktopMenu, 'd-none', 'd-block');
+        }
+    };
+
     const checkWindowSize = () => {
         const width = $(window).width();
         const isMobile = width < 600;
@@ -64,17 +86,11 @@ $(document).ready(function() {
 
         toggleMobileElements(isMobile);
         toggleTabletElements(isTablet);
-
-        if (isDesktop) {
-            toggleClass($('.navigation-parent'), 'd-block', 'd-none');
-            toggleClass($('.tablet-navigation'), 'd-none', 'd-block');
-            toggleClass($('.mobile-navigation'), 'd-none', 'd-block');
-        }
+        toggleDesktopElements(isDesktop);
     };
-     
-    $(document).ready(checkWindowSize);
-    $(window).resize(checkWindowSize)
 
+    $(document).ready(checkWindowSize);
+    $(window).resize(checkWindowSize);
 
     const toggleMenu = (showMenu) => {
         const mobileNav = $('.mobile-nav');
@@ -91,10 +107,8 @@ $(document).ready(function() {
             toggleClass(closeBtn, 'd-none', 'd-block');
         }
     };
-    
+
     $('.btn_open').on('click', () => toggleMenu(true));
     $('.btn_close').on('click', () => toggleMenu(false));
-
-
 
 });
