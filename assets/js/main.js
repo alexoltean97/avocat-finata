@@ -37,7 +37,7 @@ $(document).ready(function() {
         const header = $('.main-header');
         const btnContact = $('.btn-contact');
         const mainHeading = $('.main-heading');
-
+        const serviceHeader = $('.servicii-intro .second-heading');
 
         if (isMobile) {
             toggleClass(mobileNav, 'd-block', 'd-none');
@@ -45,12 +45,14 @@ $(document).ready(function() {
             toggleClass(header, 'mobile-header', '');
             toggleClass(btnContact, 'd-block', '');
             toggleClass(mainHeading, 'mb-2', 'mb-4');
+            toggleClass(serviceHeader, 'mb-3', 'mb-5rem');
         } else {
             toggleClass(mobileNav, 'd-none', 'd-block');
             toggleClass(desktopLogo, 'd-block', 'd-none');
             toggleClass(header, '', 'mobile-header');
             toggleClass(btnContact, '', 'd-block');
             toggleClass(mainHeading, 'mb-4', 'mb-2');
+            toggleClass(serviceHeader, 'mb-5rem', 'mb-1');
         }
     };
 
@@ -94,15 +96,18 @@ $(document).ready(function() {
 
     const toggleMenu = (showMenu) => {
         const mobileNav = $('.mobile-nav');
+        const tabletBav = $('.tablet-nav');
         const openBtn = $('.btn_open');
         const closeBtn = $('.btn_close');
     
         if (showMenu) {
             toggleClass(mobileNav, 'd-block', 'd-none');
+            toggleClass(tabletBav, 'd-block', 'd-none');
             toggleClass(openBtn, 'd-none', 'd-block');
             toggleClass(closeBtn, 'd-block', 'd-none');
         } else {
             toggleClass(mobileNav, 'd-none', 'd-block');
+            toggleClass(tabletBav, 'd-none', 'd-block');
             toggleClass(openBtn, 'd-block', 'd-none');
             toggleClass(closeBtn, 'd-none', 'd-block');
         }
