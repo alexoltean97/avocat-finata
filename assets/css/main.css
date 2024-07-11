@@ -368,6 +368,10 @@ span {
   color: var(--golden);
 }
 
+.exp-card:hover{
+  transform: scale(1.1);
+}
+
 .absolute-centering{
   left: 50%;
   transform: translate(-50%, -50%);
@@ -414,6 +418,20 @@ span {
     font-size: 14px;
     text-align: center;
   }
+
+  .accordion-mobile{
+    font-size: 14px;
+  }
+  .button-mobile{
+    font-size:20px;
+    text-align: center;
+  }
+
+  iframe{
+    width: 100%;
+    display: block;
+    margin: 20px auto 0 auto;
+  }
 }
 
 @media (max-width: 600px) {
@@ -434,6 +452,11 @@ span {
 
   .servicii-intro p{
     margin-bottom: 20px;
+  }
+
+  .imagine-prezentare img{
+    display: block;
+    margin: 0 auto;
   }
 }
 

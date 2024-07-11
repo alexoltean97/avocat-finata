@@ -10,6 +10,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
     <script src="https://kit.fontawesome.com/157ae09d42.js" crossorigin="anonymous"></script>
 </head>
 
@@ -127,7 +131,7 @@
 
                 
 
-                <div class="navigation-parent d-flex justify-content-between top-bottom-pad top-bottom-border">
+                <div class="navigation-parent d-flex justify-content-between top-bottom-pad top-bottom-border animate__animated">
                     <nav class="navigation">
                         <ul class="list-position">
                             <li><a class="white-text montserat-font transition link-hover" href="#">Acasa</a></li>
@@ -177,7 +181,7 @@
                     <div class="row">
 
                         <div class="col-lg-6 col-sm-12 col-xs-12">
-                            <div class="text-box">
+                            <div class="text-box animate__animated">
                                 <h1 class="main-heading white-text mb-4 head-mobile">Alături de tine în orice <span
                                         style="display: block;">provocare legală!</span></h1>
                                 <p class="desc-width gold-text mb-3 ft-20 lh-8 font-weight-bold p-mobile">Cu o
@@ -203,7 +207,7 @@
 
 
 
-    <section class="despre pt-5 pb-5 position-relative">
+    <section class="despre pt-5 pb-5 position-relative load__animate animate__animated">
         <div class="container">
 
             <div class="row">
@@ -249,14 +253,16 @@
 
             <div
                 class="card-experienta position-absolute basic-border montserat-font text-center p-4 absolute-centering">
+                <div class="transition exp-card">
                 <h4 class="white-text">6</h4>
                 <p class="gold-text">Ani de experienta</p>
+            </div>
             </div>
 
         </div> <!-- End container-->
     </section>
 
-    <section class="servicii bg-bleumarin mt-5 pt-5 pb-5">
+    <section class="servicii bg-bleumarin mt-5 pt-5 pb-5 animate__animated">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-xs-12">
@@ -338,16 +344,16 @@
     </section>
 
 
-    <section class="intrebari-frecvente pt-5 pb-5">
+    <section class="intrebari-frecvente pt-5 pb-5 animate__animated">
         <div class="container">
             <div class="row">
 
                 <div class="col-lg-6 col-sm-12">
                     <div class="pic-grid">
-                        <img src="assets/images/contract-work.webp" alt="Contract Work" class="top-image" />
+                        <img src="assets/images/contract-work.webp" alt="Contract Work" class="top-image transition workbox-animation" />
                         <div class="bottom-row">
-                            <img src="assets/images/hammer.webp" alt="Hammer" class="bottom-image" />
-                            <img src="assets/images/justice-statue.webp" alt="Justice Statue" class="bottom-image" />
+                            <img src="assets/images/hammer.webp" alt="Hammer" class="bottom-image transition workbox-animation" />
+                            <img src="assets/images/justice-statue.webp" alt="Justice Statue" class="bottom-image transition workbox-animation" />
                         </div>
                     </div>
                 </div>
@@ -355,20 +361,20 @@
 
                 <div class="col-lg-6 col-sm-12">
                     <div class="cutie-intrebari mt-5">
-                        <h2 class="lora-font mb-4 second-heading bleumarin-text">Ghid de <span
+                        <h2 class="lora-font mb-4 second-heading head-mobile bleumarin-text">Ghid de <span
                                 class="gold-text">Intrebari Frecvente</span></h2>
 
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h3 class="accordion-header lora-font" id="headingOne">
-                                    <button class="accordion-button third-heading" type="button" data-bs-toggle="collapse"
+                                    <button class="accordion-button third-heading button-mobile lora-font" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         Accordion Item #1
                                     </button>
                                 </h3>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
+                                    <div class="accordion-body accordion-mobile montserat-font">
                                         <strong>This is the first item's accordion body.</strong> It is shown by
                                         default, until the collapse plugin adds the appropriate classes that we use to
                                         style each element. These classes control the overall appearance, as well as the
@@ -381,14 +387,14 @@
                             </div>
                             <div class="accordion-item">
                                 <h3 class="accordion-header lora-font" id="headingTwo">
-                                    <button class="accordion-button collapsed third-heading" type="button" data-bs-toggle="collapse"
+                                    <button class="accordion-button collapsed third-heading button-mobile lora-font" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         Accordion Item #2
                                     </button>
                                 </h3>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
+                                    <div class="accordion-body accordion-mobile montserat-font">
                                         <strong>This is the second item's accordion body.</strong> It is hidden by
                                         default, until the collapse plugin adds the appropriate classes that we use to
                                         style each element. These classes control the overall appearance, as well as the
@@ -401,7 +407,7 @@
                             </div>
                             <div class="accordion-item">
                                 <h3 class="accordion-header lora-font" id="headingThree">
-                                    <button class="accordion-button collapsed third-heading" type="button" data-bs-toggle="collapse"
+                                    <button class="accordion-button collapsed third-heading button-mobile lora-font" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
                                         Accordion Item #3
@@ -409,7 +415,7 @@
                                 </h3>
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
+                                    <div class="accordion-body accordion-mobile montserat-font">
                                         <strong>This is the third item's accordion body.</strong> It is hidden by
                                         default, until the collapse plugin adds the appropriate classes that we use to
                                         style each element. These classes control the overall appearance, as well as the
@@ -429,28 +435,28 @@
         </div>
     </section>
 
-    <section class="contact bg-bleumarin pt-5 pb-5 white-text">
+    <section class="contact bg-bleumarin pt-5 pb-5 white-text animate__animated">
         <div class="container">
             <div class="row">
 
                 <div class="col-lg-6 col-sm-12">
                     <div class="cutie-contact">
                         <div class="mb-3">
-                            <h2 class="second-heading lora-font mb-4">Contact</h2>
-                            <p class="montserat-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis erat risus, bibendum non neque sit amet, congue congue enim. In in nulla nibh. Etiam venenatis mauris a urna commodo, ac tristique orci semper. Morbi sit amet turpis sit amet erat luctus eleifend. Cras sollicitudin nisi eget leo gravida, nec venenatis lectus suscipit. Donec facilisis, tellus sed pulvinar laoreet, velit ante viverra nunc, in lacinia turpis neque sed justo. Cras ac posuere diam. Nullam egestas vel nunc non interdum. Praesent non purus ligula.
+                            <h2 class="second-heading head-mobile mb-4">Contact</h2>
+                            <p class="montserat-font p-mobile">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis erat risus, bibendum non neque sit amet, congue congue enim. In in nulla nibh. Etiam venenatis mauris a urna commodo, ac tristique orci semper. Morbi sit amet turpis sit amet erat luctus eleifend. Cras sollicitudin nisi eget leo gravida, nec venenatis lectus suscipit. Donec facilisis, tellus sed pulvinar laoreet, velit ante viverra nunc, in lacinia turpis neque sed justo. Cras ac posuere diam. Nullam egestas vel nunc non interdum. Praesent non purus ligula.
                             </p>
                         </div>
 
                         <div class="lista-contact mb-3 no-style-type">
-                            <ul>
-                                <li><i class="fa-solid fa-location-dot gold-text mb-2"></i><span class="px-2 montserat-font">Adresa cabinet federalul</span></li>
-                                <li><i class="fa-solid fa-phone gold-text mb-2"></i><span class="px-2 montserat-font">0749201788</span></li>
-                                <li><i class="fa-solid fa-envelope gold-text"></i><span class="px-2 montserat-font">finatasergiu@gmail.com</span></li>
+                            <ul class="p-mobile">
+                                <li class="accordion-mobile"><i class="fa-solid fa-location-dot gold-text mb-2"></i><span class="px-2 montserat-font">Adresa cabinet federalul</span></li>
+                                <li class="accordion-mobile"><i class="fa-solid fa-phone gold-text mb-2"></i><span class="px-2 montserat-font">0749201788</span></li>
+                                <li class="accordion-mobile"><i class="fa-solid fa-envelope gold-text"></i><span class="px-2 montserat-font">finatasergiu@gmail.com</span></li>
                             </ul>
                         </div>
 
                         <div class="social-media no-style-type">
-                            <ul>
+                            <ul class="p-mobile">
                                 <li class="d-inline"><a href="#"><i class="fa-brands fa-facebook gold-text"></i></a></li>
                                 <li class="d-inline"><a href="#"><i class="fa-brands fa-instagram gold-text mx-2"></i></a></li>
                                 <li class="d-inline"><a href="#"><i class="fa-brands fa-linkedin gold-text"></i></i></a></li>
@@ -471,7 +477,7 @@
         </div>
     </section>
 
-    <footer class="main-footer bg-footer pt-5 pb-5 white-text no-style-type">
+    <footer class="main-footer bg-footer p-mobile pt-5 pb-5 white-text no-style-type animate__animated">
         <div class="container">
 
             <div class="row">
