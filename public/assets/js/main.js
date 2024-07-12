@@ -133,4 +133,32 @@ $(document).ready(function () {
 
   $(window).on("scroll", animateSections);
   animateSections();
+
+
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
+  }
+
+  // Check if the consent cookie exists
+  if (!getCookie('cookieConsent')) {
+    // Show the modal if the cookie does not exist
+    $('#cookies').modal('show');
+  }
+
+  // Set the cookie and hide the modal when the user clicks the save button
+  $('#save-changes').on('click', function () {
+    // Set the cookie to expire in 365 days
+    document.cookie = "cookieConsent=true; path=/; max-age=" + 60 * 60 * 24 * 365;
+    // Hide the modal
+    $('#cookies').modal('hide');
+  });
+
+  // Hide the modal when the user clicks the close button
+  $('#close-modal').on('click', function () {
+    $('#cookies').modal('hide');
+  });
+  
 });

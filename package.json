@@ -1,0 +1,16 @@
+{
+  "name": "cabinet_avocat",
+  "version": "1.0.0",
+  "description": "Cabinet avocat Finata Sergiu ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Oltean 14Dev",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
+  }
+}
