@@ -75,6 +75,29 @@ span {
   background-color: var(--golden);
 }
 
+.btn-modal{
+  background-color: var(--golden);
+}
+
+.btn-modal:hover{
+  color:#fff;
+  background-color: var(--golden);
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: none;
+  color: #fff; 
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .border-gold{
   border: 1px solid var(--golden);
 }
@@ -286,6 +309,26 @@ span {
   outline: none;
   box-shadow: none;
 }
+
+.modal-content {
+  height: 650px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body {
+  flex: 1 1 auto;
+}
+
+.modal-footer {
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 10;
+  border-top: 1px solid #dee2e6;
+}
+
 .content {
   position: relative;
   z-index: 2;
@@ -455,6 +498,7 @@ span {
     font-size: 14px;
   }
 
+
   .servicii-intro p{
     margin-bottom: 20px;
   }
@@ -475,6 +519,19 @@ span {
     top:20px;
   }
 }
+
+@media (min-width:1053px){
+  .modal-dialog{
+    min-width: 1000px;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-background {
+    min-width: 500px;
+  }
+}
+
 
 @media (max-width:980px){
   .logo{
