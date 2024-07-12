@@ -1,18 +1,117 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html amp lang="ro">
 
 <head>
+    <title>Finata Sergiu Avocat</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Website avocat Arad.">
-    <title>Finata Sergiu Avocat</title>
-    <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- AMP script -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <!-- AMP Boilerplate -->
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://cdn.ampproject.org">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Preload Key Resources -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        as="style">
+    <link rel="preload" href="assets/images/contract-work.webp" as="image">
+    <link rel="preload" href="assets/images/hammer.webp" as="image">
+    <link rel="preload" href="assets/images/justice-statue.webp" as="image">
+    <link rel="preload" href="assets/images/statue.webp" as="image">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.ampproject.org/v0.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrap.min.css" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.min.css" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="https://kit.fontawesome.com/157ae09d42.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print"
+        onload="this.onload=null;this.removeAttribute('media');">
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    </noscript>
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/157ae09d42.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
@@ -195,8 +294,10 @@
                         </div>
 
                         <div class="col-lg-6 col-sm-12 col-xs-12">
-                            <div class="img-placeholder text-center">
-                                <img class="image-none" src="assets/images/statue.png" alt="placeholder">
+                            <div class="statue img-placeholder text-center">
+                                <amp-img src="assets/images/statue.webp" width="417" height="599" layout="fixed"
+                                    alt="Statue of justice" class="image-none"></amp-img>
+
                             </div>
                         </div>
                     </div>
@@ -246,8 +347,6 @@
                 <div class="col-lg-6 col-sm-12">
                     <div class="imagine-prezentare">
                         <picture>
-
-
                             <source media="(max-width:600px)" srcset="assets/images/lawyer-mobile.webp">
                             <img src="assets/images/lawyer-desktop.webp" alt="Main image">
                         </picture>
@@ -368,13 +467,18 @@
 
                 <div class="col-lg-6 col-sm-12">
                     <div class="pic-grid">
-                        <img src="assets/images/contract-work.webp" alt="Contract Work"
-                            class="top-image transition workbox-animation">
+
+                        <amp-img src="assets/images/contract-work.webp" width="600" height="400" layout="responsive"
+                            alt="Contract Work" class="top-image transition workbox-animation">
+                        </amp-img>
                         <div class="bottom-row">
-                            <img src="assets/images/hammer.webp" alt="Hammer"
+                            <amp-img src="assets/images/hammer.webp" width="300" height="430" layout="responsive"
+                                alt="Hammer" class="bottom-image transition workbox-animation">
+                            </amp-img>
+                            <amp-img src="assets/images/justice-statue.webp" width="300" height="430"
+                                layout="responsive" alt="Justice Statue"
                                 class="bottom-image transition workbox-animation">
-                            <img src="assets/images/justice-statue.webp" alt="Justice Statue"
-                                class="bottom-image transition workbox-animation">
+                            </amp-img>
                         </div>
                     </div>
                 </div>
@@ -534,10 +638,10 @@
 
         </div>
     </footer>
-    <script src="https://kit.fontawesome.com/157ae09d42.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/157ae09d42.js" crossorigin="anonymous" defer></script>
     <script src="assets/libraries/jquery.min.js"></script>
     <script src="assets/libraries/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.min.js"></script>
 </body>
 
 </html>
