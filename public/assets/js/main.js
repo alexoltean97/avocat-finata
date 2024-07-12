@@ -142,23 +142,32 @@ $(document).ready(function () {
     return null;
   }
 
-  // Check if the consent cookie exists
+
   if (!getCookie('cookieConsent')) {
-    // Show the modal if the cookie does not exist
     $('#cookies').modal('show');
   }
 
-  // Set the cookie and hide the modal when the user clicks the save button
+
   $('#save-changes').on('click', function () {
-    // Set the cookie to expire in 365 days
     document.cookie = "cookieConsent=true; path=/; max-age=" + 60 * 60 * 24 * 365;
-    // Hide the modal
     $('#cookies').modal('hide');
   });
 
-  // Hide the modal when the user clicks the close button
+
   $('#close-modal').on('click', function () {
     $('#cookies').modal('hide');
   });
+
+
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('../../../service-worker.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(error) {
+        console.log('ServiceWorker registration failed: ', error);
+      });
+    });
+  }
   
 });
