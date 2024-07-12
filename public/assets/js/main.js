@@ -37,7 +37,7 @@ $(document).ready(function () {
     const mainHeading = $(".main-heading");
     const serviceHeader = $(".servicii-intro .second-heading");
     const copyright = $(".copy-right");
-
+    const tabletServices = $(".servicii-intro h2")
     if (isMobile) {
       toggleClass(mobileNav, "d-block", "d-none");
       toggleClass(desktopLogo, "d-none", "");
@@ -46,6 +46,7 @@ $(document).ready(function () {
       toggleClass(mainHeading, "mb-2", "mb-4");
       toggleClass(serviceHeader, "mb-3", "mb-5rem");
       toggleClass(copyright, "text-center", "text-end");
+      toggleClass(tabletServices, "", "mb-5rem");
     } else {
       toggleClass(mobileNav, "d-none", "d-block");
       toggleClass(desktopLogo, "d-block", "d-none");
@@ -54,16 +55,19 @@ $(document).ready(function () {
       toggleClass(mainHeading, "mb-4", "mb-2");
       toggleClass(serviceHeader, "mb-5rem", "mb-1");
       toggleClass(copyright, "text-end", "text-center");
+      toggleClass(tabletServices, "", "mb-5rem");
     }
   };
 
   const toggleTabletElements = (isTablet) => {
     const tabletNav = $(".tablet-navigation");
-
+    const tabletServices = $(".servicii-intro h2")
     if (isTablet) {
       toggleClass(tabletNav, "d-block", "d-none");
+      toggleClass(tabletServices, "", "mb-5rem ");
     } else {
       toggleClass(tabletNav, "d-none", "d-block");
+      toggleClass(tabletServices, "mb-5rem", "");
     }
   };
 
