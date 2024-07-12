@@ -35,35 +35,35 @@ $(document).ready(function () {
     const header = $(".main-header");
     const btnContact = $(".btn-contact");
     const mainHeading = $(".main-heading");
-    const serviceHeader = $(".servicii-intro .second-heading");
-    const copyright = $(".copy-right");
 
+    const copyright = $(".copy-right");
+ 
     if (isMobile) {
       toggleClass(mobileNav, "d-block", "d-none");
       toggleClass(desktopLogo, "d-none", "");
       toggleClass(header, "mobile-header", "");
       toggleClass(btnContact, "d-block", "");
       toggleClass(mainHeading, "mb-2", "mb-4");
-      toggleClass(serviceHeader, "mb-3", "mb-5rem");
       toggleClass(copyright, "text-center", "text-end");
+      
     } else {
       toggleClass(mobileNav, "d-none", "d-block");
       toggleClass(desktopLogo, "d-block", "d-none");
       toggleClass(header, "", "mobile-header");
       toggleClass(btnContact, "", "d-block");
       toggleClass(mainHeading, "mb-4", "mb-2");
-      toggleClass(serviceHeader, "mb-5rem", "mb-1");
       toggleClass(copyright, "text-end", "text-center");
     }
   };
 
   const toggleTabletElements = (isTablet) => {
     const tabletNav = $(".tablet-navigation");
-
+  
     if (isTablet) {
       toggleClass(tabletNav, "d-block", "d-none");
     } else {
       toggleClass(tabletNav, "d-none", "d-block");
+  
     }
   };
 
@@ -117,12 +117,12 @@ $(document).ready(function () {
   $(".btn_open").on("click", () => toggleMenu(true));
   $(".btn_close").on("click", () => toggleMenu(false));
   
-  function animateSections() {
+  const  animateSections = () => {
     if ($(window).width() >= 768) { 
       $(".animate__animated").each(function () {
-        var sectionTop = $(this).offset().top;
-        var scrollTop = $(window).scrollTop();
-        var windowHeight = $(window).height();
+        let sectionTop = $(this).offset().top;
+        let scrollTop = $(window).scrollTop();
+        let windowHeight = $(window).height();
 
         if (scrollTop + windowHeight > sectionTop + 50) {
           $(this).addClass("animate__fadeInLeft");
@@ -135,30 +135,37 @@ $(document).ready(function () {
   animateSections();
 
 
-  function getCookie(name) {
+  const getCookie = (name) => {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
     return null;
   }
 
-  // Check if the consent cookie exists
+
   if (!getCookie('cookieConsent')) {
-    // Show the modal if the cookie does not exist
     $('#cookies').modal('show');
   }
 
-  // Set the cookie and hide the modal when the user clicks the save button
-  $('#save-changes').on('click', function () {
-    // Set the cookie to expire in 365 days
+
+  $('#save-changes').on('click', () => {
     document.cookie = "cookieConsent=true; path=/; max-age=" + 60 * 60 * 24 * 365;
-    // Hide the modal
     $('#cookies').modal('hide');
   });
 
-  // Hide the modal when the user clicks the close button
-  $('#close-modal').on('click', function () {
+
+  $('#close-modal').on('click',  () => {
     $('#cookies').modal('hide');
   });
+
+  if ('serviceWorker' in navigator) {
+    $(window).on('load', () => {
+      navigator.serviceWorker.register('../../../service-worker.js').then((registration) => {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch((error) => {
+        console.log('ServiceWorker registration failed: ', error);
+      });
+    });
+  }
   
 });
