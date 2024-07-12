@@ -35,39 +35,35 @@ $(document).ready(function () {
     const header = $(".main-header");
     const btnContact = $(".btn-contact");
     const mainHeading = $(".main-heading");
-    const serviceHeader = $(".servicii-intro .second-heading");
+
     const copyright = $(".copy-right");
-    const tabletServices = $(".servicii-intro h2")
+ 
     if (isMobile) {
       toggleClass(mobileNav, "d-block", "d-none");
       toggleClass(desktopLogo, "d-none", "");
       toggleClass(header, "mobile-header", "");
       toggleClass(btnContact, "d-block", "");
       toggleClass(mainHeading, "mb-2", "mb-4");
-      toggleClass(serviceHeader, "mb-3", "mb-5rem");
       toggleClass(copyright, "text-center", "text-end");
-      toggleClass(tabletServices, "", "mb-5rem");
+      
     } else {
       toggleClass(mobileNav, "d-none", "d-block");
       toggleClass(desktopLogo, "d-block", "d-none");
       toggleClass(header, "", "mobile-header");
       toggleClass(btnContact, "", "d-block");
       toggleClass(mainHeading, "mb-4", "mb-2");
-      toggleClass(serviceHeader, "mb-5rem", "mb-1");
       toggleClass(copyright, "text-end", "text-center");
-      toggleClass(tabletServices, "", "mb-5rem");
     }
   };
 
   const toggleTabletElements = (isTablet) => {
     const tabletNav = $(".tablet-navigation");
-    const tabletServices = $(".servicii-intro h2")
+  
     if (isTablet) {
       toggleClass(tabletNav, "d-block", "d-none");
-      toggleClass(tabletServices, "", "mb-5rem ");
     } else {
       toggleClass(tabletNav, "d-none", "d-block");
-      toggleClass(tabletServices, "mb-5rem", "");
+  
     }
   };
 
@@ -121,12 +117,12 @@ $(document).ready(function () {
   $(".btn_open").on("click", () => toggleMenu(true));
   $(".btn_close").on("click", () => toggleMenu(false));
   
-  function animateSections() {
+  const  animateSections = () => {
     if ($(window).width() >= 768) { 
       $(".animate__animated").each(function () {
-        var sectionTop = $(this).offset().top;
-        var scrollTop = $(window).scrollTop();
-        var windowHeight = $(window).height();
+        let sectionTop = $(this).offset().top;
+        let scrollTop = $(window).scrollTop();
+        let windowHeight = $(window).height();
 
         if (scrollTop + windowHeight > sectionTop + 50) {
           $(this).addClass("animate__fadeInLeft");
@@ -139,7 +135,7 @@ $(document).ready(function () {
   animateSections();
 
 
-  function getCookie(name) {
+  const getCookie = (name) => {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
@@ -152,23 +148,21 @@ $(document).ready(function () {
   }
 
 
-  $('#save-changes').on('click', function () {
+  $('#save-changes').on('click', () => {
     document.cookie = "cookieConsent=true; path=/; max-age=" + 60 * 60 * 24 * 365;
     $('#cookies').modal('hide');
   });
 
 
-  $('#close-modal').on('click', function () {
+  $('#close-modal').on('click',  () => {
     $('#cookies').modal('hide');
   });
 
-
-
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('../../../service-worker.js').then(function(registration) {
+    $(window).on('load', () => {
+      navigator.serviceWorker.register('../../../service-worker.js').then((registration) => {
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(error) {
+      }).catch((error) => {
         console.log('ServiceWorker registration failed: ', error);
       });
     });
